@@ -1,0 +1,32 @@
+.nav-bar {
+  display: -webkit-flex;
+  display: flex;
+  height: 58px;
+  background: #16a6ea;
+  color: aliceblue;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  .list-link {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      padding: 0 1rem;
+      transition: 0.3s ease-in-out;
+      background: #16a6ea;
+    }
+
+    a:hover {
+      background: #00ff7ead;
+    }
+  }
+}
