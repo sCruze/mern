@@ -1,0 +1,13 @@
+.main-layout__container {
+  background: linear-gradient(45deg, #f9d1b5, #c4ecff);
+  height: 100vh;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column; }
+  .main-layout__container main {
+    display: flex;
+    display: -webkit-flex;
+    flex-grow: 1;
+    flex-direction: column; }
+
+/*# sourceMappingURL=MainLayout.css.map */

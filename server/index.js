@@ -6,13 +6,18 @@ const app = require('./app')
 // Модули, используемые в приложении
 const consola = require('consola')
 const PORT = require('../lib/config').PORT
+const mongoConfig = require('../lib/config-mongoose')
+
 
 // Асинхронная функция старта приложения
 async function startApp(PORT) {
     // Блок удачного вызова функции старта приложения
     try {
+        // Вызываем модуль подключения к БД
+        await mongoConfig()
+
         // вызываем метод listen, для запуска сервера на порту PORT
-        app.listen(PORT, () => {
+        await app.listen(PORT, () => {
             // Выводим соответствующую информацию в консоли
             consola.ready({
                 message: `Server has been started http://localhost:${PORT}`,

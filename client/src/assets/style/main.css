@@ -23,12 +23,53 @@
   src: url("../fonts/roboto/Roboto-Bold.eot");
   src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700; }
+.btn {
+  text-transform: uppercase;
+  vertical-align: bottom;
+  border: 0;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  padding: .625rem 1.5rem .5rem;
+  font-size: .75rem;
+  line-height: 1.5;
+  display: inline-block;
+  color: #4f4f4f;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border-radius: .25rem;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
+
+.btn-rounded {
+  border-radius: 10rem; }
+
+.btn-success {
+  color: #fff;
+  background-color: #00b74a; }
+
+.btn.active, .btn.active:focus, .btn.focus, .btn:active, .btn:active:focus, .btn:focus, .btn:hover {
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.1); }
+
+.btn-check:focus + .btn-success, .btn-success:focus, .btn-success:hover {
+  background-color: #26c265;
+  border-color: #1abe5c; }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
   * body, * html {
-    height: 100%; }
+    max-height: 100%; }
   * body {
     font-family: "Roboto", sans-serif; }
 
