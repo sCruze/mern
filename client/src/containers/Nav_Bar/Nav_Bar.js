@@ -1,10 +1,18 @@
 // Импорт стилей
-import './nav-bar.scss'
+import './Nav_Bar.scss'
 
 import { Link } from "react-router-dom";
 
 // Компонент Навигационной панели в верхней части страницы
-export default function navBar() {
+export default function NavBar({onActivePanelUser, activePanelUser}) {
+
+    // Переменная с классами от кнопки на панели навигации для активации модального окна
+    let btnPanelUserClasses = ['nav-bar__user-panel-btn']
+
+    // Если сотояние activePanelAccount === true, добовлять класс active-panel
+    if (activePanelUser) {
+        btnPanelUserClasses.push('active-panel')
+    }
 
     return (
         <div className="nav-bar">
@@ -15,7 +23,10 @@ export default function navBar() {
                 <Link to="/tasks" >Задачник</Link>
                 <Link to="/questionnaire">Опросник</Link>
             </div>
-            <div className="user__block">
+            <div
+                onClick={onActivePanelUser}
+                className={btnPanelUserClasses.join(' ')}
+            >
                 <span className="triangle"></span>
                 <p>Войти</p>
             </div>

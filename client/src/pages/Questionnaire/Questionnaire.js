@@ -1,4 +1,6 @@
+import './Questionnaire.scss'
 
+// Страница Questionnaire
 export default function questionnaire() {
     return (
         <div>
