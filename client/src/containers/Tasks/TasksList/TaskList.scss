@@ -1,0 +1,13 @@
+.task-list {
+  margin: 0 auto;
+  margin-top: 5rem;
+  max-width: 56%;
+  display: flex;
+  background: linear-gradient(45deg, #8dffd59e, #faffb0);
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 6px 6px rgba(0,0,0,0.18);
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+}

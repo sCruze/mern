@@ -8,8 +8,15 @@ const app = require('express')()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// Регистрация роутов в приложении
-app.use('/api/auth', require('./routes/auth.routes'))
+// Production
+if (process.env.NODE_ENV === 'production') {
+    app.use('/', require('express').static(path.join(__dirname, '../client/build')))
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../client/build/index.html'))
+    })
+}
+
 
 app.post('/', (req, res) => {
     try {
@@ -21,13 +28,10 @@ app.post('/', (req, res) => {
     }
 })
 
-if (process.env.NODE_ENV === 'production') {
-    app.use('/', require('express').static(path.join(__dirname, '../client/build')))
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../client/build/index.html'))
-    })
-}
+// Регистрация роутов в приложении
+app.use('/api/auth', require('./routes/auth.routes'))
+app.use('/api', require('./routes/task.routes'))
+// app.use('/api', require('./routes/questions.routes'))
 
 // Экспортируем переменную app, для использования его в других фалйах приложения
 module.exports = app
