@@ -22,6 +22,7 @@ export default function NavBar({onActivePanelUser, activePanelUser}) {
             <div className="list-link">
                 <Link to="/tasks" >Задачник</Link>
                 <Link to="/questionnaire">Опросник</Link>
+                <Link to="/registration">Регистрация</Link>
             </div>
             <div
                 onClick={onActivePanelUser}

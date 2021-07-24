@@ -10,6 +10,10 @@ const schema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    dateAdded: {
+        type: Date,
+        default: Date.now()
     }
 })
 
